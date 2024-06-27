@@ -8,6 +8,23 @@
     <link rel="stylesheet" href="./css/output.css">
 </head>
 <body>
+    <style>
+            .hover\:text-custom-hover:hover {
+          color: #605DEC;
+        }
+        @media (min-width:800px) {
+            h1{
+                font-size: 100px;
+            }
+        }
+        .card {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+    </style>
     <header class="bg-[#FFFFFF] text-[#7C8DB0] p-4 w-full fixed z-10">
         <div class="container mx-auto flex justify-between items-center">
           <div class="flex items-center space-x-4">
@@ -29,11 +46,466 @@
           </nav>
         </div>
       </header>
-<main class="w-[98%] h-auto">
-<section class="">
+      <br><br><br><br>
+<main class="w-[98%] h-auto  bg-blue-50 m-auto py-[50px] flex flex-col items-end">
+    <section class="w-[90%] mx-auto h-auto  p-6 rounded-lg">
+        <!-- First row of elements -->
+        <div class="flex flex-wrap gap-4 justify-start">
+          <div class="w-full md:w-auto flex items-center justify-center">
+            <div class="w-[173px] h-[50px] bg-white border border-gray-500 rounded-sm flex items-center justify-center gap-4 p-2">
+              <img src="./images/Union.svg" alt="Union">
+              <h3 class="text-[18px] text-[#7C8DB0]">SFO</h3>
+            </div>
+          </div>
+          <div class="w-full md:w-auto flex items-center justify-center">
+            <div class="w-[193px] h-[50px] bg-white border border-gray-500 rounded-sm flex items-center justify-center gap-4 p-2">
+              <img src="./images/arrival.svg" alt="Arrival">
+              <h3 class="text-[18px] text-[#7C8DB0]">NRT</h3>
+            </div>
+          </div>
+          <div class="w-full md:w-auto flex items-center justify-center">
+            <div class="w-[233px] h-[50px] bg-white border border-gray-500 rounded-sm flex items-center justify-center gap-4 p-2">
+              <img src="./images/calendar with dates.svg" alt="Calendar">
+              <h3 class="text-[18px] text-[#7C8DB0]">Depart - Return</h3>
+            </div>
+          </div>
+          <div class="w-full md:w-auto flex items-center justify-center">
+            <div class="w-[193px] h-[50px] bg-white border border-gray-500 rounded-sm flex items-center justify-center gap-4 p-2">
+              <img src="./images/person solid.svg" alt="Person">
+              <h3 class="text-[18px] text-[#7C8DB0]">1 adult</h3>
+            </div>
+          </div>
+          <div class="w-full md:w-auto flex items-center justify-center">
+            <button class="w-full md:w-[126px] h-[50px] bg-[#605DEC] rounded-sm text-[#FAFAFA] text-[18px]">Search</button>
+          </div>
+        </div>
+      
+        <!-- Second row of select elements -->
+        <div class="flex flex-wrap gap-4 mt-6 justify-start ">
+          <div class="w-full md:w-auto flex-1 min-w-[120px] justify-start">
+            <select class="block w-[120px] pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+              <option>Max price</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+          </div>
+          <div class="w-full md:w-auto flex-1 min-w-[120px]">
+            <select class="blockw-[120px] pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+              <option>Shops</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+          </div>
+          <div class="w-full md:w-auto flex-1 min-w-[120px]">
+            <select class="block w-[120px] pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+              <option>Times</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+          </div>
+          <div class="w-full md:w-auto flex-1 min-w-[120px]">
+            <select class="block w-[120px] pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+              <option>Airlines</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+          </div>
+          <div class="w-full md:w-auto flex-1 min-w-[120px]">
+            <select class="block w-[120px] pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+              <option>Seat class</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+          </div>
+          <div class="w-full md:w-auto flex-1 min-w-[120px]">
+            <select class="block w-[120px] pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+              <option>More</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+          </div>
+        </div>
+      </section>
+<section class="custom-container mt-[30px] grid gap-[30px] lg:flex">
+            <!-- left -->
+            <div class="lg:w-[60%] flex flex-col gap-[10px]">
+                <p class="text-[18px] text-[#6E7491]">Choose a <span class="text-[#605DEC]">departing</span> flight</p>
+                <!-- card -->
+                <div class=" border-[2px] border-[#CBD4E6] w-full rounded-[10px] overflow-hidden ">
+                    <div class="grid gap-[10px] md:grid-cols-3 lg:grid-cols-4 border-[2px] border-[#CBD4E6] w-full py-[10px] px-[12px]">
+                        
+                        <div class="flex gap-[20px]"> 
+                            <img src="./images/qiz bola.svg" alt="">
+                            <div>
+                                <p class="text-[#27273F]">16h 45m</p>
+                            <p class="text-[#7C8DB0]">Hawaiian Airlines</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-[#27273F]">7:00AM - 4:15PM</p>
+                        </div>
+                        <div>
+                            <p class="text-[#27273F]">1 stop</p>
+                            <p class="text-[#7C8DB0]">2h 45m in HNL</p>
+                        </div>
+                        <div>
+                            <p class="text-[#27273F]">$624</p>
+                            <p class="text-[#7C8DB0]">round trip</p>
+                        </div>
+                    </div>
 
-</section>
+                    <div class="grid gap-[10px] md:grid-cols-3 lg:grid-cols-4 border-[2px] border-[#CBD4E6] w-full py-[10px] px-[12px]">
+                        
+                        <div class="flex gap-[20px]"> 
+                            <img src="./images/Japan Airlines.svg" alt="">
+                            <div>
+                                <p class="text-[#27273F]">16h 45m</p>
+                            <p class="text-[#7C8DB0]">Hawaiian Airlines</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-[#27273F]">7:00AM - 4:15PM</p>
+                        </div>
+                        <div>
+                            <p class="text-[#27273F]">1 stop</p>
+                            <p class="text-[#7C8DB0]">2h 45m in HNL</p>
+                        </div>
+                        <div>
+                            <p class="text-[#27273F]">$624</p>
+                            <p class="text-[#7C8DB0]">round trip</p>
+                        </div>
+                    </div>
+
+                    <div class="grid gap-[10px] md:grid-cols-3 lg:grid-cols-4 border-[2px] border-[#CBD4E6] w-full py-[10px] px-[12px]">
+                        
+                        <div class="flex gap-[20px]"> 
+                            <img src="./images/qiz bola.svg" alt="">
+                            <div>
+                                <p class="text-[#27273F]">16h 45m</p>
+                            <p class="text-[#7C8DB0]">Hawaiian Airlines</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-[#27273F]">7:00AM - 4:15PM</p>
+                        </div>
+                        <div>
+                            <p class="text-[#27273F]">1 stop</p>
+                            <p class="text-[#7C8DB0]">2h 45m in HNL</p>
+                        </div>
+                        <div>
+                            <p class="text-[#27273F]">$624</p>
+                            <p class="text-[#7C8DB0]">round trip</p>
+                        </div>
+                    </div>
+
+
+<div class="grid gap-[10px] md:grid-cols-3 lg:grid-cols-4 border-[2px] border-[#CBD4E6] w-full py-[10px] px-[12px]">
+                        
+                        <div class="flex gap-[20px]"> 
+                            <img src="./images/uchburchak.svg" alt="">
+                            <div>
+                                <p class="text-[#27273F]">16h 45m</p>
+                            <p class="text-[#7C8DB0]">Hawaiian Airlines</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-[#27273F]">7:00AM - 4:15PM</p>
+                        </div>
+                        <div>
+                            <p class="text-[#27273F]">1 stop</p>
+                            <p class="text-[#7C8DB0]">2h 45m in HNL</p>
+                        </div>
+                        <div>
+                            <p class="text-[#27273F]">$624</p>
+                            <p class="text-[#7C8DB0]">round trip</p>
+                        </div>
+                    </div>
+
+                    <div class="grid gap-[10px] md:grid-cols-3 lg:grid-cols-4 border-[2px] border-[#CBD4E6] w-full py-[10px] px-[12px]">
+                        
+                        <div class="flex gap-[20px]"> 
+                            <img src="./images/evro.svg" alt="">
+                            <div>
+                                <p class="text-[#27273F]">16h 45m</p>
+                            <p class="text-[#7C8DB0]">Hawaiian Airlines</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-[#27273F]">7:00AM - 4:15PM</p>
+                        </div>
+                        <div>
+                            <p class="text-[#27273F]">1 stop</p>
+                            <p class="text-[#7C8DB0]">2h 45m in HNL</p>
+                        </div>
+                        <div>
+                            <p class="text-[#27273F]">$624</p>
+                            <p class="text-[#7C8DB0]">round trip</p>
+                        </div>
+                    </div>
+                    <div class="grid gap-[10px] md:grid-cols-3 lg:grid-cols-4 border-[2px] border-[#E9E8FC] w-full py-[10px] px-[12px]">
+                        
+                        <div class="flex gap-[20px]"> 
+                            <img src="./images/qizil.svg" alt="">
+                            <div>
+                                <p class="text-[#27273F]">16h 45m</p>
+                            <p class="text-[#7C8DB0]">Hawaiian Airlines</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-[#27273F]">7:00AM - 4:15PM</p>
+                        </div>
+                        <div>
+                            <p class="text-[#27273F]">1 stop</p>
+                            <p class="text-[#7C8DB0]">2h 45m in HNL</p>
+                        </div>
+                        <div>
+                            <p class="text-[#27273F]">$624</p>
+                            <p class="text-[#7C8DB0]">round trip</p>
+                        </div>
+                    </div>
+
+</div>
+<button class="w-[168px] h-[50px] text-[18px] text-[#605DEC] rounded-sm flex items-center justify-center py-[20px] " style="border: 1px solid #605DEC;">Show all flights</button>
+            </div>
+            <!-- right -->
+             <div class="lg:w-[40%]">
+                <p class="text-[#6E7491] text-[18px]">Price grid (flexible dates)</p>
+                <table class="w-full">
+                    <tr>
+                        <td class="border-[2px] border-[#E9E8FC] md:py-[10px] text-center"></td>
+                        <td class="border-[2px] border-[#E9E8FC] md:py-[10px] text-center text-[#52556F]">2/12</td>
+                        <td class="border-[2px] border-[#E9E8FC] md:py-[10px] text-center text-[#52556F]">2/13</td>
+                        <td class="border-[2px] border-[#E9E8FC] md:py-[10px] text-center text-[#52556F]">2/14</td>
+                        <td class="border-[2px] border-[#E9E8FC] md:py-[10px] text-center text-[#52556F]">2/15</td>
+                        <td class="border-[2px] border-[#E9E8FC] md:py-[10px] text-center text-[#52556F]">2/16</td>
+                    </tr>
+                    <tr>
+                        <td class="border-[2px] border-[#E9E8FC] md:py-[10px] text-center text-[#52556F]">3/7</td>
+                        <td class="border-[2px] border-[#E9E8FC] md:py-[10px] text-center text-[#6E7491]">$837</td>
+                        <td class="border-[2px] border-[#CBD4E6] md:py-[10px] text-center text-[#6E7491]">$592</td>
+                        <td class="border-[2px] border-[#E9E8FC] md:py-[10px] text-center text-[#6E7491]">$592</td>
+                        <td class="border-[2px] border-[#E9E8FC] md:py-[10px] text-center text-[#6E7491]">$1,308</td>
+                        <td class="border-[2px] border-[#E9E8FC] md:py-[10px] text-center text-[#6E7491]">$837</td>
+                    </tr>
+                    <tr>
+                        <td class="border-[2px] border-[#E9E8FC] md:py-[10px] text-center text-[#52556F]">3/8</td>
+                        <td class="border-[2px] border-[#E9E8FC] md:py-[10px] text-center text-[#6E7491]">$837</td>
+                        <td class="border-[2px] border-[#E9E8FC] md:py-[10px] text-center text-[#6E7491]">$592</td>
+                        <td class="border-[2px] border-[#E9E8FC] md:py-[10px] text-center text-[#6E7491]">$592</td>
+                        <td class="border-[2px] border-[#E9E8FC] md:py-[10px] text-center text-[#6E7491]">$837</td>
+                        <td class="border-[2px] border-[#E9E8FC] md:py-[10px] text-center text-[#6E7491]">$1,308</td>
+                    </tr>
+                    <tr>
+                        <td class="border-[2px] border-[#E9E8FC] md:py-[10px] text-center text-[#52556F]">3/9</td>
+                        <td class="border-[2px] border-[#E9E8FC] md:py-[10px] text-center text-[#6E7491]">$624</td>
+                        <td class="border-[2px] border-[#E9E8FC] md:py-[10px] text-center text-[#6E7491]">$592</td>
+                        <td class="border-[2px] border-[#E9E8FC] md:py-[10px] text-center text-[#6E7491]">$624</td>
+                        <td class="border-[2px] border-[#E9E8FC] md:py-[10px] text-center text-[#6E7491]">$592</td>
+                        <td class="border-[2px] border-[#E9E8FC] md:py-[10px] text-center text-[#6E7491]">$592</td>
+                    </tr>
+                    <tr>
+                        <td class="border-[2px] border-[#E9E8FC] md:py-[10px] text-center text-[#52556F]">3/10</td>
+                        <td class="border-[2px] border-[#E9E8FC] md:py-[10px] text-center text-[#6E7491]">$1,308</td>
+                        <td class="border-[2px] border-[#E9E8FC] md:py-[10px] text-center text-[#6E7491]">$624</td>
+                        <td class="border-[2px] border-[#E9E8FC] md:py-[10px] text-center text-[#6E7491]">$624</td>
+                        <td class="border-[2px] border-[#E9E8FC] md:py-[10px] text-center text-[#6E7491]">$837</td>
+                        <td class="border-[2px] border-[#E9E8FC] md:py-[10px] text-center text-[#6E7491]">$837</td>
+                    </tr>
+                    <tr>
+                        <td class="border-[2px] border-[#CBD4E6] md:py-[10px] text-center text-[#52556F]">3/11</td>
+
+
+<td class="border-[2px] border-[#CBD4E6] md:py-[10px] text-center text-[#6E7491]">$592</td>
+                        <td class="border-[2px] border-[#E9E8FC] md:py-[10px] text-center text-[#6E7491]">$624</td>
+                        <td class="border-[2px] border-[#E9E8FC] md:py-[10px] text-center text-[#6E7491]">$1,308</td>
+                        <td class="border-[2px] border-[#E9E8FC] md:py-[10px] text-center text-[#6E7491]">$837</td>
+                        <td class="border-[2px] border-[#E9E8FC] md:py-[10px] text-center text-[#6E7491]">$624</td>
+                    </tr>
+                </table>
+                <p class="text-[#6E7491] text-[18px] pt-[50px]">Price history</p>
+                <img src="./images/Price History.svg" alt="" class="w-full">
+             </div>
+       </section>
+       <section class="custom-container mt-[80px] grid gap-[30px] h-auto lg:flex">
+        <div class="w-full lg:w-[60%]">
+            <img src="./images/Map.svg" alt="">
+        </div>
+        <div class="grid gap-[20px] lg:w-[40%]">
+            <div class="flex items-center justify-between w-[200px]"  >
+                <p class="text-[18px] text-[#6E7491]">Price rating</p>
+                <button class="w-[85px] h-[26px] bg-[#5CD6C0] rounded-[5px] text-[white]">Buy soon</button>
+            </div>
+            <p class="text-[#6E7491]">We recommend booking soon. The average cost of this flight is $750, but could rise 18% to $885 in two weeks.</p>
+            <p class="text-[#A1B0CC]">Tripma analyzes thousands of flights, prices, and trends to ensure you get the best deal.</p>
+        </div>
+       </section>
+       <br>
+       <section class="py-12 px-4 md:px-0 m-auto">
+        <div class="container mx-auto flex flex-col gap-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <h2 class="text-[#6E7491] text-2xl md:text-3xl">Find <span class="text-[#605DEC]"> places to stay</span>  in Japan</h2>
+                <h3 class="text-[#A1B0CC] text-2xl md:text-3xl flex items-center gap-2">
+                    All
+                    <span><i class="fas fa-arrow-right"></i></span>
+                </h3>
+            </div>
+            <div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <div class="card bg-white rounded-lg shadow-lg flex flex-col">
+                    <img class="w-full h-4/5 object-cover rounded-t-lg" src="./images/mehonxona.svg" alt="City Image">
+                    <div class="p-6 flex flex-col justify-between flex-1">
+                        <div>
+                            <h2 class="text-xl md:text-2xl font-semibold text-[#605DEC]">Hotel Kaneyamaen and Bessho SASA</h2>
+                            <p class="text-[#7C8DB0] mt-2 text-sm md:text-base">Located at the base of Mount Fuji, Hotel Kaneyamaen is a traitional japanese ryokan with a modern twist. Enjoy a private onsen bath and a private multi-course kaiseki dinner.</p>
+                        </div>
+                      
+                    </div>
+                </div>
+                <div class="card bg-white rounded-lg shadow-lg flex flex-col">
+                    <img class="w-full h-4/5 object-cover rounded-t-lg" src="./images/ayol.svg" alt="City Image">
+                    <div class="p-6 flex flex-col justify-between flex-1">
+                        <div>
+                            <h2 class="text-xl md:text-2xl font-semibold text-[#605DEC]">HOTEL THE FLAG 大阪市</h2>
+                            <p class="text-[#7C8DB0] mt-2 text-sm md:text-base">Make a stop in Osaka and stay at HOTEL THE FLAG, just a few minutes walk to experience the food culture surrounding Dontonbori. Just one minute away is the Shinsaibashi shopping street.</p>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="card bg-white rounded-lg shadow-lg flex flex-col">
+                    <img class="w-full h-4/5 object-cover rounded-t-lg" src="./images/uzga.svg" alt="City Image">
+                    <div class="p-6 flex flex-col justify-between flex-1">
+                        <div>
+                            <h2 class="text-xl md:text-2xl font-semibold text-[#605DEC]">9 Hours Shinjuku</h2>
+                            <p class="text-[#7C8DB0] mt-2 text-sm md:text-base">Experience a truly unique stay in an authentic Japanese capsule hotel. 9 Hours Shinjuku is minutes from one of Japan’s busiest train stations. Just take the NEX train from Narita airport!</p>
+                        </div>
+                   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-12 px-4 md:px-0 m-auto">
+        <div class="container mx-auto flex flex-col gap-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <h2 class="text-[#6E7491] text-2xl md:text-3xl">Find your next adventure with these <span class="text-[#605DEC]">flight deals</span></h2>
+                <h3 class="text-[#A1B0CC] text-2xl md:text-3xl flex items-center gap-2">
+                    All
+                    <span><i class="fas fa-arrow-right"></i></span>
+                </h3>
+            </div>
+            <div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <div class="card bg-white rounded-lg shadow-lg flex flex-col">
+                    <img class="w-full h-4/5 object-cover rounded-t-lg" src="./images/tokyo.svg" alt="City Image">
+                    <div class="p-6 flex flex-col justify-between flex-1">
+                        <div>
+                            <h2 class="text-xl md:text-2xl font-semibold">Shanghai,  <span class="text-[#605DEC]">China</span></h2>
+                            <p class="text-[#7C8DB0] mt-2 text-sm md:text-base">An international city rich in culture</p>
+                        </div>
+                        <div class="text-xl md:text-2xl font-bold text-[#6E7491] self-end mt-4">$598</div>
+                    </div>
+                </div>
+                <div class="card bg-white rounded-lg shadow-lg flex flex-col">
+                    <img class="w-full h-4/5 object-cover rounded-t-lg" src="./images/afrika.svg" alt="City Image">
+                    <div class="p-6 flex flex-col justify-between flex-1">
+                        <div>
+                            <h2 class="text-xl md:text-2xl font-semibold">Nairobi, <span class="text-[#605DEC]">Kenya</span></h2>
+                            <p class="text-[#7C8DB0] mt-2 text-sm md:text-base">Dubbed the Safari Capital of the World</p>
+                        </div>
+                        <div class="text-xl md:text-2xl font-bold text-[#6E7491] self-end mt-4">$981</div>
+                    </div>
+                </div>
+                <div class="card bg-white rounded-lg shadow-lg flex flex-col">
+                    <img class="w-full h-4/5 object-cover rounded-t-lg" src="./images/chinas.svg" alt="City Image">
+                    <div class="p-6 flex flex-col justify-between flex-1">
+                        <div>
+                            <h2 class="text-xl md:text-2xl font-semibold">Seoul,  <span class="text-[#605DEC]">South Korea</span></h2>
+                            <p class="text-[#7C8DB0] mt-2 text-sm md:text-base">Step back in time in the Gion district</p>
+                        </div>
+                        <div class="text-xl md:text-2xl font-bold text-[#6E7491] self-end mt-4">$633</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
+<footer class="w-full h-[300px] flex flex-row py-2 justify-around bg-white ">
+    <div class="flex items-center space-x-4">
+        <img src="./images/Wordmark.svg" alt="Logo" class="h-[54] w-[134px]">
+      </div>
+      <div class="relative top-[70px] flex gap-[200px]">
+        <div class="flex flex-col gap-[10px]">
+            <h2 class="text-[18px] text-[#6E7491] font-bold">About</h2>
+            <ul class="flex flex-col gap-[10px]">
+                <li class="text-[#7C8DB0] text-[16px] font-normal leading-[21px]"><a href="#">About Tripma</a></li>
+                <li class="text-[#7C8DB0] text-[16px] font-normal leading-[21px]"> <a href="#">How it works</a></li>
+                <li class="text-[#7C8DB0] text-[16px] font-normal leading-[21px]"> <a href="#">Careers</a></li>
+                <li class="text-[#7C8DB0] text-[16px] font-normal leading-[21px]"> <a href="#">Press</a></li>
+                <li class="text-[#7C8DB0] text-[16px] font-normal leading-[21px]"> <a href="#">Blog</a></li>
+                <li class="text-[#7C8DB0] text-[16px] font-normal leading-[21px]"> <a href="#">Forum</a></li>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-[10px]">
+            <h2 class="text-[18px] text-[#6E7491] font-bold">Partner with us</h2>
+            <ul class="flex flex-col gap-[10px]">
+                <li class="text-[#7C8DB0] text-[16px] font-normal leading-[21px]"><a href="#">Partnership programs</a></li>
+                <li class="text-[#7C8DB0] text-[16px] font-normal leading-[21px]"> <a href="#">Affiliate program</a></li>
+                <li class="text-[#7C8DB0] text-[16px] font-normal leading-[21px]"> <a href="#">Connectivity partners</a></li>
+                <li class="text-[#7C8DB0] text-[16px] font-normal leading-[21px]"> <a href="#">Promotions and events</a></li>
+                <li class="text-[#7C8DB0] text-[16px] font-normal leading-[21px]"> <a href="#">Integrations</a></li>
+                <li class="text-[#7C8DB0] text-[16px] font-normal leading-[21px]"> <a href="#">Community</a></li>
+                <li class="text-[#7C8DB0] text-[16px] font-normal leading-[21px]"> <a href="#">Loyalty program</a></li>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-[10px]">
+            <h2 class="text-[18px] text-[#6E7491] font-bold">Support</h2>
+            <ul class="flex flex-col gap-[10px]">
+                <li class="text-[#7C8DB0] text-[16px] font-normal leading-[21px]"><a href="#">Help Center</a></li>
+                <li class="text-[#7C8DB0] text-[16px] font-normal leading-[21px]"> <a href="#">How it works</a></li>
+                <li class="text-[#7C8DB0] text-[16px] font-normal leading-[21px]"> <a href="#">Contact us</a></li>
+                <li class="text-[#7C8DB0] text-[16px] font-normal leading-[21px]"> <a href="#">Privacy policy</a></li>
+                <li class="text-[#7C8DB0] text-[16px] font-normal leading-[21px]"> <a href="#">Terms of service</a></li>
+                <li class="text-[#7C8DB0] text-[16px] font-normal leading-[21px]"> <a href="#">Trust and safety</a></li>
+                <li class="text-[#7C8DB0] text-[16px] font-normal leading-[21px]"> <a href="#">Accessibility</a></li>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-[20px]">
+            <h2 class="text-[18px] text-[#6E7491] font-bold">Get the app</h2>
+            <ul class="flex flex-col gap-[20px]">
+                <li class="text-[#7C8DB0] text-[16px] font-normal leading-[21px]"><a href="#">Tripma for Android</a></li>
+                <li class="text-[#7C8DB0] text-[16px] font-normal leading-[21px]"> <a href="#">Tripma for iOS</a></li>
+                <li class="text-[#7C8DB0] text-[16px] font-normal leading-[21px]">  <a href="#">Mobile site</a></li>
+                <li> <a href="#"><button class="bg-[#000000] flex w-[135px] h-[40px] justify-around items-center rounded-[4px]">
+                    <img src="./images/olma.svg" >
+                    <div>
+                        <h3 class="text-[#FFFFFF] text-[10px]">Download on the</h3>
+                        <h2 class="text-[#FFFFFF] text-[14px]">App Store</h2>
+                    </div>
+                </button></a></li>
+                <li> <a href="#"><button class="bg-[#000000] flex w-[135px] h-[40px] justify-around items-center rounded-[4px]">
+                    <img src="./images/olma.svg" >
+                    <div>
+                        <h3 class="text-[#FFFFFF] text-[10px]">Download on the</h3>
+                        <h2 class="text-[#FFFFFF] text-[14px]">App Store</h2>
+                    </div>
+                </button></a></li>
+               
+                
+            </ul>
+          </div>
+      </div>
+      <br>
+    
+</footer>
+<div class="w-full h-auto border border-t border-t-black border-t-solid flex justify-around items-center mt-[60px]">
+    <div class="flex items-center justify-center gap-[25px] w-[130px] h-auto">
+<h2 class="text-[#6E7491] text-[20px]"><i class="fa-brands fa-telegram"></i></h2>
+<h2 class="text-[#6E7491] text-[20px]"><i class="fa-brands fa-instagram"></i></h2>
+<h2 class="text-[#6E7491] text-[20px]"><i class="fa-brands fa-github"></i></h2>
+    </div>
+    <div>
+        <h2 class="text-[18px] text-[#7C8DB0]">© 2020 Tripma incorporated</h2>
+    </div>
+          </div>
+
       <script src="./Js/app.js"></script>
 </body>
 </html>
